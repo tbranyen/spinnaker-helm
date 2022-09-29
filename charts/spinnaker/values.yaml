@@ -1,9 +1,9 @@
 halyard:
   # If spinnakerVersion is not specified appVersion in Chart.yml is chosen for Spinnaker
-  #spinnakerVersion: 1.22.2
+  #spinnakerVersion: 2.1.0
   image:
     repository: us-docker.pkg.dev/spinnaker-community/docker/halyard
-    tag: 1.39.0
+    tag: 1.49.0
     pullSecrets: []
   # Set to false to disable persistence data volume for halyard
   persistence:

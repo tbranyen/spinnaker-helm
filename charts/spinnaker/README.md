@@ -1,36 +1,43 @@
 # Spinnaker Chart
 
-[Spinnaker](http://spinnaker.io/) is an open source, multi-cloud continuous delivery platform.
+[Spinnaker](http://spinnaker.io/) is an open source, multi-cloud continuous
+delivery platform.
 
 ## Chart Details
-This chart will provision a fully functional and fully featured Spinnaker installation
-that can deploy and manage applications in the cluster that it is deployed to.
+
+This chart will provision a fully functional and fully featured Spinnaker
+installation that can deploy and manage applications in the cluster that it is
+deployed to.
 
 Redis and Minio are used as the stores for Spinnaker state.
 
-For more information on Spinnaker and its capabilities, see it's [documentation](http://www.spinnaker.io/docs).
+For more information on Spinnaker and its capabilities, see its
+[documentation](http://www.spinnaker.io/docs).
 
 ## Installing the Chart
 
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm repo add spinnaker https://opsmx.github.io/spinnaker-helm/
-$ helm install --name my-release spinnaker/spinnaker --timeout 800
+helm repo add spinnaker https://github.com/tbranyen/spinnaker-helm
+helm install spinnaker spinnaker/spinnaker --timeout 600s
 ```
 
-Note that this chart pulls in many different Docker images so can take a while to fully install.
+Note that this chart pulls in many different Docker images so can take a while
+to fully install.
 
 ## Configuration
 
 Configurable values are documented in the `values.yaml`.
 
-Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
+Specify each parameter using the `--set key=value[,key=value]` argument to
+`helm install`.
 
-Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
+Alternatively, a YAML file that specifies the values for the parameters can be
+provided while installing the chart. For example,
 
 ```bash
-$ helm install --name my-release -f values.yaml spinnaker/spinnaker
+helm install spinnaker -f values.yaml spinnaker/spinnaker
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
@@ -38,8 +45,10 @@ $ helm install --name my-release -f values.yaml spinnaker/spinnaker
 ## Adding Kubernetes Clusters to Spinnaker
 
 ### Configuring arbitrary clusters with a kubernetes secret
-By default, installing the chart only registers the local cluster as a deploy target
-for Spinnaker. If you want to add arbitrary clusters need to do the following:
+
+By default, installing the chart only registers the local cluster as a deploy
+target for Spinnaker. If you want to add arbitrary clusters need to do the
+following:
 
 1. Upload your kubeconfig to a secret with the key `config` in the cluster you are installing Spinnaker to.
 
