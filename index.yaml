@@ -6,7 +6,7 @@ entries:
     version: 3.0.0
     created: "2022-09-28T20:39:24.386952099Z"
     urls:
-    - https://github.com/tbranyen/spinnaker-helm/latest.tgz
+    - https://tbranyen.github.io/spinnaker-helm/latest.tgz
     dependencies:
     - condition: redis.enabled
       name: redis

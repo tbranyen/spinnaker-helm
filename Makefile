@@ -6,4 +6,5 @@ default:
 		--exclude='./README.md' \
 		-zcvf \
 		latest.tgz \
-		.
+		--transform 's/^\./spinnaker/' \
+		. \
