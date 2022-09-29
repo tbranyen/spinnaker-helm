@@ -19,7 +19,7 @@ For more information on Spinnaker and its capabilities, see its
 To install the chart with the release name `my-release`:
 
 ```bash
-helm repo add spinnaker https://github.com/tbranyen/spinnaker-helm
+helm repo add spinnaker https://tbranyen.github.io/spinnaker-helm
 helm install spinnaker spinnaker/spinnaker --timeout 600s
 ```
 
