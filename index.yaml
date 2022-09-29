@@ -3,7 +3,10 @@ entries:
   spinnaker:
   - apiVersion: v1
     appVersion: 2.1.0
+    version: 3.0.0
     created: "2022-09-28T20:39:24.386952099Z"
+    urls:
+    - https://github.com/tbranyen/spinnaker-helm/latest.tgz
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -34,7 +37,4 @@ entries:
     - https://github.com/spinnaker
     - https://github.com/OpsMx/spinnaker-helm
     - https://github.com/viglesiasce/images
-    urls:
-    - https://github.com/OpsMx/spinnaker-helm/releases/download/spinnaker-2.2.12/spinnaker-2.2.12.tgz
-    version: 2.2.12
 generated: "2022-06-30T20:39:24.3869697Z"
